@@ -14,11 +14,12 @@ void insert(int heap[], int& size, int value) {
     heap[size] = value;
     size++;
 
-    for (int i = size - 1; i > 0; i--) {
+    for (int i = size - 1; i > 0; ) {
         int j = (i - 1) / 2;  
         if (heap[j] < heap[i]) {
             
             swap(heap[j], heap[i]);
+i=j;
         } 
         else {
             break;  
